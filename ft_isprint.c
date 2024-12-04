@@ -1,45 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/04 17:09:27 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/03 17:10:47 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/03 17:55:53 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_isprint(int c)
 {
-	size_t	i;
-	size_t	size;
-
-	size = 0;
-	while(src[i] != '\0')
-	{
-		while(i <= size)
-		{
-			dst[i] = src[i];
-			len++;
-		}
-	}
-	return(0);
-}
-
-int main(void)
-{
-	const char *src;
-	char *dst;
-	size_t size;
-
-	dst = "uuuuuu";
-	src = "copia";
-	size = '3';
-	ft_strlcpy(src, dst);
-	printf("%s");
-	return(0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }

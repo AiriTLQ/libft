@@ -1,45 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/04 17:09:27 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/03 17:17:02 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/03 17:23:45 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_strlen(const char *s)
 {
-	size_t	i;
-	size_t	size;
+	unsigned int	len;
 
-	size = 0;
-	while(src[i] != '\0')
-	{
-		while(i <= size)
-		{
-			dst[i] = src[i];
-			len++;
-		}
-	}
-	return(0);
-}
-
-int main(void)
-{
-	const char *src;
-	char *dst;
-	size_t size;
-
-	dst = "uuuuuu";
-	src = "copia";
-	size = '3';
-	ft_strlcpy(src, dst);
-	printf("%s");
-	return(0);
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	return (len);
 }

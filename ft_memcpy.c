@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/04 17:09:27 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/04 17:16:02 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/04 17:31:04 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-int	ft_strlcpy(char *dst, const char *src, size_t size)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	size_t	size;
-
-	size = 0;
-	while(src[i] != '\0')
+	int	i;
+	
+	i = 0;
+	while (dest[i] != '\0' && src[i] != '\0')
 	{
-		while(i <= size)
+		while (i < n)
 		{
-			dst[i] = src[i];
-			len++;
+			dest[i] = src[i];
+			i++;
 		}
 	}
-	return(0);
+	return(dest);
 }
 
-int main(void)
+int	main(void)
 {
-	const char *src;
-	char *dst;
-	size_t size;
+	unsigned char src;
+	unsigned char dest;
+	int n;
 
-	dst = "uuuuuu";
-	src = "copia";
-	size = '3';
-	ft_strlcpy(src, dst);
-	printf("%s");
-	return(0);
+	src = "Copia";
+	dest = "Delete";
+	n = 5;
+	ft_memcpy(src, dest);
+	printf("Resultado: %s", dest);
 }
