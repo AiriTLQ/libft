@@ -1,39 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 17:16:02 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/05 13:17:46 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/05 15:05:34 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/05 15:43:22 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;	
-	unsigned long		i;
+	unsigned char	*str;
+	size_t			i;
 
-	d = dest;
-	s = src;
+	str = s;
 	i = 0;
 	while (i < n)
 	{
-		d[i] = s[i];
+		str[i] = '\0';
 		i++;
 	}
-	return (dest);
 }
 /*
 int	main(void)
 {
-	char src[] = "Copy";
-	char dest[] = "Mamawebo";
-
-	ft_memcpy(dest-2, src, 4);
-	printf("%s\n", dest);
+	char str[] = "Mamawebo";
+	ft_bzero(str + 2, 4);
+	printf("Resultado: %s\n", str);
 }*/

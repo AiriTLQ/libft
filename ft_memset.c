@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 17:16:02 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/05 13:17:46 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/05 12:11:37 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/05 13:46:41 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;	
-	unsigned long		i;
+	unsigned char	*str;
+	unsigned long	i;
 
-	d = dest;
-	s = src;
+	str = s;
 	i = 0;
 	while (i < n)
 	{
-		d[i] = s[i];
+		str[i] = c;
 		i++;
 	}
-	return (dest);
+	return (s);
 }
 /*
 int	main(void)
 {
-	char src[] = "Copy";
-	char dest[] = "Mamawebo";
-
-	ft_memcpy(dest-2, src, 4);
-	printf("%s\n", dest);
+	char str[] = "Tu mama me mima";
+	ft_memset(str + 11, 42, 5);
+	printf("%s\n", str);
 }*/
