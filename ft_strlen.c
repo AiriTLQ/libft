@@ -6,9 +6,11 @@
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:17:02 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/03 17:23:45 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/09 10:10:08 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//#include <stdio.h>
 
 int	ft_strlen(const char *s)
 {
@@ -19,3 +21,10 @@ int	ft_strlen(const char *s)
 		len++;
 	return (len);
 }
+/*
+int main(void)
+{
+	const char *s = "Mamawebo";
+	int len = ft_strlen(s);
+	printf("Hay %d caracteres", len);
+}*/

@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/09 10:12:28 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/09 12:23:19 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/09 12:30:56 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
-//#include <string.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strrchr(const char* s, int c)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (i <= size)
-	{
-		if (src[i] != '\0' && dst[i] != '\0')
-		{
-			dst[i] = src[i];
-		}
+	while (s[i] != '\0')
 		i++;
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return (char *)(s + i);
+		i--;
 	}
-	dst[i] = '\0';
-	return (ft_strlen(dst));
+	return NULL;
 }
 /*
-int main(void)
+int main (void)
 {
-	char src[] = "Mamawebo";
-	char dst[] = "Tontolaba";
-	int len = ft_strlcpy(dst,src, 4);
-	printf("El string mide %d centimetros", len);
-	return(0);
+	char s[] = "Tu mama me mima";
+	char *result = ft_strrchr(s, 'm');
+
+	if (result != NULL)
+		printf("Caracter encontrado en la posicion %ld\n", result - s);
+	else
+		printf("Caracter no encontrado");
+	return (0);
 }*/
