@@ -6,13 +6,13 @@
 /*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:23:19 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/09 12:30:56 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/12 10:04:57 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 
-char	*ft_strrchr(const char* s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
@@ -22,10 +22,10 @@ char	*ft_strrchr(const char* s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == c)
-			return (char *)(s + i);
+			return ((char *)(s + i));
 		i--;
 	}
-	return NULL;
+	return (NULL);
 }
 /*
 int main (void)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:24:00 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/09 12:23:08 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/12 11:30:46 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	ch;
 
+	ch = (unsigned char) c;
 	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
-			return (char *)(s + i);
+			return ((char *)(s + i));
 		i++;
 	}
 	if (s[i] == c)
-		return (char *)(s + i);
-	return NULL;
+		return ((char *)(s + i));
+	return (NULL);
 }
 /*
 int main (void)

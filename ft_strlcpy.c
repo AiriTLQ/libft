@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.c      +#+  +:+       +#+        */
+/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/09 10:12:28 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/12 11:22:24 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
