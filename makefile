@@ -1,9 +1,9 @@
 NAME = libft.a
 
-CC = CC
+CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
-SRC = *.c
+SRC = $(wildcard *.c)
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

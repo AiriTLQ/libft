@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 11:24:00 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/12 11:30:46 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/14 21:24:36 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -21,11 +22,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == ch)
 			return ((char *)(s + i));
 		i++;
 	}
-	if (s[i] == c)
+	if (s[i] == ch)
 		return ((char *)(s + i));
 	return (NULL);
 }
