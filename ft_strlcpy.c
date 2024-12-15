@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
+/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 15:02:57 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/14 21:22:11 by K4$$             ###   ########.fr       */
+/*   Updated: 2024/12/15 15:23:03 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
-	while (i <= size)
+	if (size == '0')
+		return (ft_strlen(src));
+	while (i < size)
 	{
 		if (src[i] != '\0' && dst[i] != '\0')
 		{
@@ -28,7 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return (ft_strlen(dst));
+	return (ft_strlen(src));
 }
 /*
 int main(void)

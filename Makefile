@@ -20,7 +20,7 @@ clean:
 	@rm -f $(OBJ)
 	@echo "Objetos eliminados"
 
-fclean:
+fclean: clean
 	@rm -f $(NAME)
 	@echo "Librería eliminada"
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
+/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 16:34:32 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/14 21:21:03 by K4$$             ###   ########.fr       */
+/*   Updated: 2024/12/15 13:35:27 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c > 48 || c < 58)
-		return (0);
-	return (1);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

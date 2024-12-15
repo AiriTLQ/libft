@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
+/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:22:45 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/14 21:22:06 by K4$$             ###   ########.fr       */
+/*   Updated: 2024/12/15 14:55:19 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		i++;
 		j++;
 	}
-	return (strlen(dst));
+	return (ft_strlen(dst));
 }
 /*
 int main(void)
