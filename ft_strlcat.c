@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:22:45 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/15 14:55:19 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/16 16:55:28 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,24 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dst[i] != '\0')
+	while (dst[i] != '\0' && i < size)
 		i++;
-	while (src[j] != '\0' && j <= size)
+	if (i == size)
+		return (i + ft_strlen(src));
+	while (src[j] != '\0' && (i + j) < (size - 1))
 	{
-		dst[i] = src[j];
-		i++;
+		dst[i + j] = src[j];
 		j++;
 	}
-	return (ft_strlen(dst));
+	dst[i + j] = '\0';
+	while (src[j] != '\0')
+		j++;
+	return (i + j);
 }
 /*
 int main(void)

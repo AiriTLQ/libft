@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 12:23:19 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/15 13:10:06 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/16 17:14:31 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,21 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	uc;
 
 	i = 0;
+	uc = (unsigned char)(c % 256);
 	while (s[i] != '\0')
 		i++;
-	while (i >= 0)
+	while (i > 0)
 	{
-		if (s[i] == c)
+		if (s[i] == uc)
 			return ((char *)(s + i));
 		i--;
 	}
+	if (s[i] == uc)
+		return ((char *)(s + i));
 	return (NULL);
 }
 /*

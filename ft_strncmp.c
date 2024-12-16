@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:05:48 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/15 14:40:36 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/16 16:19:38 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
 	{
 		if (str1[i] != str2[i])
 			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
