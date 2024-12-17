@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 10:05:48 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/17 11:18:21 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/17 11:44:53 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/17 12:43:29 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t	i;
+	char	*ptr;
+	size_t	size;
+	size_t	src_len;
 
-	i = 0;
-	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
-	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-		i++;
-	}
-	return (0);
+	src_len = ft_strlen(s);
+	size = (src_len + 1);
+	ptr = (char *)malloc(size);
+	if (ptr == NULL)
+		return (NULL);
+	ft_memcpy (ptr, s, size);
+	return (ptr);
 }
-/*
-int main (void)
-{
-	char str1[] = "Mamawebo";
-	char str2[] = "Mimawebo";
-	int result = ft_strncmp(str1, str2, 2);
-	printf("Diferencia: %d\n", result);
-}*/

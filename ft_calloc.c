@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 10:05:48 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/17 11:18:21 by airdomin         ###   ########.fr       */
+/*   Created: 2024/12/17 11:17:44 by airdomin          #+#    #+#             */
+/*   Updated: 2024/12/17 12:15:38 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
 #include "libft.h"
 
-int	ft_strncmp(const char *str1, const char *str2, size_t n)
+void	*ft_calloc(size_t num, size_t size)
 {
-	size_t	i;
+	size_t	total;
+	void	*ptr;
 
-	i = 0;
-	while (i < n && (str1[i] != '\0' || str2[i] != '\0'))
-	{
-		if (str1[i] != str2[i])
-			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
-		i++;
-	}
-	return (0);
+	total = (num * size);
+	ptr = malloc(total);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero (ptr, total);
+	return (ptr);
 }
-/*
-int main (void)
-{
-	char str1[] = "Mamawebo";
-	char str2[] = "Mimawebo";
-	int result = ft_strncmp(str1, str2, 2);
-	printf("Diferencia: %d\n", result);
-}*/
