@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 13:19:00 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/19 12:45:32 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/20 13:56:07 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 #endif
