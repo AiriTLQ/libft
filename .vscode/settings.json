@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"ft_split": "cpp",
+		"random": "cpp",
+		"algorithm": "c"
+	}
+}

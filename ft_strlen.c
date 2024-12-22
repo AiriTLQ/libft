@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 17:17:02 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/20 15:01:25 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/22 14:07:19 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include <stdio.h>
 #include "libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	len;
+	size_t	len;
 
 	len = 0;
 	while (s[len] != '\0')

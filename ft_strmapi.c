@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 15:01:04 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/20 15:02:12 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/22 15:07:03 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	int		i;
+	size_t	i;
 	char	*result;
 
 	i = 0;

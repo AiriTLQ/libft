@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: K4$$ <strykewt@hotmail.com>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 15:04:42 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/20 15:10:56 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/22 15:06:45 by K4$$             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < ft_strlen(s))
