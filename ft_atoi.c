@@ -6,11 +6,10 @@
 /*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 13:09:17 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/15 14:48:24 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:09:51 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_atoi(const char *str)

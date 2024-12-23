@@ -6,12 +6,10 @@
 /*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:22:45 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/17 11:18:10 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:07:37 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -35,12 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		j++;
 	return (i + j);
 }
-/*
-int main(void)
-{
-	char src[] = "Mamawebo";
-	char dst[] = "Mimawebos";
-	int len = ft_strlcat(src, dst, 4);
-	printf("El string destino ahora mide %d centimetros", len);
-	return (0);
-}*/

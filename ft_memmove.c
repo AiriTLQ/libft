@@ -6,11 +6,10 @@
 /*   By: airdomin <airdomin@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 13:09:47 by airdomin          #+#    #+#             */
-/*   Updated: 2024/12/15 13:26:59 by airdomin         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:06:28 by airdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
